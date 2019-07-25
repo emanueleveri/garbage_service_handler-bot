@@ -11,7 +11,7 @@ def handle(msg):
     giorno = msg['text']
     if msg['text']=='/start':
         bot.sendMessage(chat_id,"Benvenuto @"+str(username) + " per usare questo bot scrivi una data nel formato gg/mm/AAAA")
-        bot.sendMessage(chat_id,"per esempio 1/08/19")
+        bot.sendMessage(chat_id,"per esempio 01/08/19")
     else:
         if len(giorno.split('/')) == 3:
             query = "select garbagetype from garbage where data = '"+str(giorno)+"'"
